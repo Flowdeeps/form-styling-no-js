@@ -177,7 +177,10 @@ label {
 .slider input[type="radio"] {
   display: none;
 }
-.slider input[type="radio"] + span {
+.slider input[type="radio"] + label {
+  animation: labelin 0.5s normal forwards ease-in-out;
+}
+.slider input[type="radio"] + label + span {
   position: absolute;
   z-index: 1;
   top: -1px;
@@ -193,18 +196,24 @@ label {
   border-right: none;
   transform: rotate(-30deg);
 }
-.slider input[type="radio"]:nth-of-type(1):checked + label + input[type="radio"] + span {
-  animation: slide_from 0.5s normal backwards ease-in-out;
-}
-.slider input[type="radio"]:nth-of-type(1):checked + label + input[type="radio"] + span + .bg-field::after {
-  animation: fadein 0.5s normal forwards ease-in-out;
-}
-.slider input[type="radio"] + label + input[type="radio"]:checked + span {
+.slider input[type="radio"] + label + input[type="radio"]:checked + label + span {
   left: calc(100% - 24px);
   animation: slide_to 0.5s normal forwards ease-in-out;
 }
-.slider input[type="radio"] + label + input[type="radio"]:checked + span + .bg-field::after {
+.slider input[type="radio"] + label + input[type="radio"]:checked + label + span + .bg-field::after {
   animation: fadeout 0.5s normal forwards ease-in-out;
+}
+.slider input[type="radio"]:checked + label {
+  animation: labelout 0.5s normal forwards ease-in-out;
+}
+.slider input[type="radio"]:nth-of-type(1) {
+  outline: solid 1px red;
+}
+.slider input[type="radio"]:nth-of-type(1):checked + label + input[type="radio"] + label + span {
+  animation: slide_from 0.5s normal backwards ease-in-out;
+}
+.slider input[type="radio"]:nth-of-type(1):checked + label + input[type="radio"] + label + span + .bg-field::after {
+  animation: fadein 0.5s normal forwards ease-in-out;
 }
 .slider label {
   position: relative;
@@ -273,14 +282,30 @@ label {
     color: transparent;
   }
 }
-/* checkbox styles */
-.checkbox label {
-  color: #fff;
+@keyframes labelin {
+  from {
+    color: #fff;
+  }
+  to {
+    color: #999;
+  }
 }
+@keyframes labelout {
+  from {
+    color: #999;
+  }
+  to {
+    color: #fff;
+  }
+}
+/* checkbox styles */
 .checkbox input[type=checkbox] {
   display: none;
 }
-.checkbox input[type=checkbox] + span {
+.checkbox input[type=checkbox] + label {
+  animation: labelin 0.5s normal forwards ease-in-out;
+}
+.checkbox input[type=checkbox] + label + span {
   background: #333;
   display: inline-block;
   height: 20px;
@@ -298,7 +323,10 @@ label {
   line-height: 20px;
   animation: fadeout 0.5s normal forwards ease-in-out;
 }
-.checkbox input[type=checkbox]:checked + span {
+.checkbox input[type=checkbox]:checked + label {
+  animation: labelout 0.5s normal forwards ease-in-out;
+}
+.checkbox input[type=checkbox]:checked + label + span {
   background: #333;
   border-top-color: #000;
   border-bottom-color: #fff;
