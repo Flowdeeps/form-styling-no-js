@@ -1,0 +1,26 @@
+{
+  "name": "form-no-js",
+  "homepage": "https://github.com/PeteOfRepublic/form-styling-no-js",
+  "authors": [
+    "PeteOfRepublic pete@republicofpete.net"
+  ],
+  "description": "A suite of form controls with no js but a load of css animations",
+  "main": "index.html",
+  "keywords": [
+    "CSS",
+    "HTML",
+    "Forms"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "blankslate": "https://github.com/flowdeeps/blankslate.git"
+  }
+}

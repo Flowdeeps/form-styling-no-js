@@ -1,0 +1,31 @@
+{
+  "name": "form-no-js",
+  "version": "1.0.0",
+  "description": "A suite of form controls with no js but a load of css animations",
+  "main": "Gruntfile.js",
+  "dependencies": {
+    "bower": "^1.7.9",
+    "grunt": "^1.0.1",
+    "grunt-contrib-less": "^1.3.0",
+    "grunt-contrib-watch": "^1.0.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PeteOfRepublic/form-styling-no-js.git"
+  },
+  "keywords": [
+    "HTML",
+    "CSS",
+    "Forms"
+  ],
+  "author": "PeteOfRepublic (pete@peteofrepublic.net)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/PeteOfRepublic/form-styling-no-js/issues"
+  },
+  "homepage": "https://github.com/PeteOfRepublic/form-styling-no-js#readme"
+}
