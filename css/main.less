@@ -33,7 +33,6 @@ label {
 }
 
 /* slider syles */
-@left_val: calc(100% - 16px);
 .slider {
   div {
     position: relative;
@@ -43,7 +42,6 @@ label {
     box-shadow: inset 0 0 2px #000, 0 0 5px #000;
     display: -webkit-box;
     max-height: 23px;
-    width: 150px;
     &:before {
       content: ".";
       height: 33px;
@@ -163,6 +161,7 @@ label {
 }
 
 // animations
+@left_val: ~'calc(100% - 24px)';
 @keyframes slide_to {
   from {
     left: 0;
